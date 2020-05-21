@@ -21,7 +21,6 @@ class CreateTanaman2Table extends Migration
             $table->string('sensor3');
             $table->string('suhu');
             $table->string('cahaya');
-            $table->timestamp('saat_ditambahkan')->nullable();
             $table->timestamps();
         });
     }

@@ -76,13 +76,13 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">DAFTAR TANAMAN</li>
-                    <li class="active">
+                    <li>
                         <a href="/tanaman">
                             <i class="material-icons">widgets</i>
                             <span>Tanaman 1</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="/tanaman2">
                             <i class="material-icons">widgets</i>
                             <span>Tanaman 2</span>
@@ -99,7 +99,7 @@
                             <i class="material-icons">widgets</i>
                             <span>Tanaman 4</span>
                         </a>
-                    </li>                 
+                    </li>            
                 </ul>
             </div>
             <!-- #Menu -->
@@ -127,11 +127,13 @@
                 </div>
                 <div class="col-xs-2 col-sm-3 col-md-7 col-lg-7">
                 </div>
+                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
+                </div>
             </div>
             <!-- CPU Usage -->  
             <div class="row clearfix">  
             <br></br>
-            </div>      
+            </div>              
             <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2">
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
@@ -183,12 +185,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($tanaman1 as $tanam)
+                                    @foreach($tanaman2 as $tanam)
                                         <tr>
                                             <td>1</td>
                                             <td>Sensor EC 1</td>
                                             <td><span class="label bg-green">Good</span></td>
-                                            <td>{{ $tanam->nutrisi }} ppm</td>                                            
+                                            <td>{{ $tanam->sensor1 }} ppm</td>                                            
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -224,7 +226,8 @@
                     </div>
                 </div>
                 <!-- #END# Task Info -->
-                <form method="post" action="/store">
+                 <!-- CPU Usage --> 
+            <form method="post" action="/input">
             {{ csrf_field()}}           
             <div class="col-xs-0 col-sm-0 col-md-0 col-lg-2">
                 </div>

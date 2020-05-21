@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/tanaman','HomeController@index');
+Route::get('/tanaman2','HomeController@tanam2');
+Route::get('/tambah','HomeController@tambah');
+Route::post('/store','HomeController@store');
+Route::post('/input','HomeController@input');
